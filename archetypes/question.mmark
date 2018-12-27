@@ -2,13 +2,17 @@
 weight = 1
 +++
 
-What is the answer?
+How is the question number determined?
 
-A.  This one
-B.  That one
-C.  No, it's this one
-D.  {{< correct >}}Actually, it's this one{{< /correct >}}
+A.  Filename
+D.  File modification time
+C.  {{< correct >}}"weight" parameter in front matter{{< /correct >}}
+D.  "order" parameter in front matter
 
 {{% answer-info %}}
-You can add additional information about the answer using this shortcode. It will only be shown when the answer is shown.
+The "weight" parameter determines the ordering of questions and intermissions: They will be presented in order of ascending weight. If the "weight" parameter is not suitable as a question number, you can add the "number" parameter. The "number" parameter need not be a simple number: It can be an arbitrary string.
+
+You may notice that the HTML form of the "correct" shortcode is used. This is because using the Markdown form results in a paragraph break being created, at least when I tested it.
+
+(Note that this information is only shown when the answer is shown.)
 {{% /answer-info %}}
