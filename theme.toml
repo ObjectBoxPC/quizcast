@@ -1,0 +1,12 @@
+name = "Quizcast"
+license = "MIT"
+licenselink = "https://github.com/philipchungtech/quizcast/blob/master/LICENSE.txt"
+description = "Theme for creating quiz slideshows using Slidy2"
+homepage = "http://github.com/philipchungtech/quizcast"
+tags = ["quiz", "slideshow"]
+features = []
+min_version = "0.41"
+
+[author]
+name = "Philip Chung"
+homepage = "http://philipchungtech.tk/"
