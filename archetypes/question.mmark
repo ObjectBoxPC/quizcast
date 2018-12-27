@@ -1,0 +1,14 @@
++++
+weight = 1
++++
+
+What is the answer?
+
+A.  This one
+B.  That one
+C.  No, it's this one
+D.  {{< correct >}}Actually, it's this one{{< /correct >}}
+
+{{% answer-info %}}
+You can add additional information about the answer using this shortcode. It will only be shown when the answer is shown.
+{{% /answer-info %}}

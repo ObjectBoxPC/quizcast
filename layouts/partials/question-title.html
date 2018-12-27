@@ -1,0 +1,13 @@
+{{- with .Title -}}
+	{{- . -}}
+{{- else -}}
+	{{- with .Params.number -}}
+		Question {{ . }}
+	{{- else -}}
+		{{- with .Params.weight -}}
+			Question {{ . }}
+		{{- else -}}
+			Question
+		{{- end -}}
+	{{- end -}}
+{{- end -}}

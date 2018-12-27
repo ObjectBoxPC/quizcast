@@ -1,0 +1,16 @@
+[data-showing-answer] .correct {
+	color: green;
+}
+
+.answer-info {
+	visibility: hidden;
+}
+
+[data-showing-answer] .answer-info {
+	visibility: visible;
+}
+
+.show-answer {
+	position: absolute;
+	bottom: 5em;
+}
