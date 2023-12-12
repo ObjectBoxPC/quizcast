@@ -1,5 +1,8 @@
 +++
 weight = 1
+
+[_build]
+render = "link"
 +++
 
 How is the question number determined?
