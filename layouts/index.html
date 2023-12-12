@@ -7,16 +7,16 @@
 		<link rel="stylesheet" href="quizcast/quizcast.css" type="text/css"/>
 	</head>
 	<body>
-		{{ range where .Pages.ByWeight "Type" "intro" }}
-			{{ partial "intermission.html" . }}
-		{{ end }}
-		{{ range where .Pages.ByWeight "Type" "!=" "intro" }}
-			{{ if .Params.intermission }}
-				{{ partial "intermission.html" . }}
-			{{ else }}
-				{{ partial "question.html" . }}
-			{{ end }}
-		{{ end }}
+		{{- range where .Pages.ByWeight "Type" "intro" -}}
+			{{- partial "intermission.html" . -}}
+		{{- end -}}
+		{{- range where .Pages.ByWeight "Type" "!=" "intro" -}}
+			{{- if .Params.intermission -}}
+				{{- partial "intermission.html" . -}}
+			{{- else -}}
+				{{- partial "question.html" . -}}
+			{{- end -}}
+		{{- end -}}
 		<script src="slidy/slidy.js" charset="utf-8"></script>
 		<script src="quizcast/quizcast.js" charset="UTF-8"></script>
 	</body>
