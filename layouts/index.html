@@ -10,11 +10,13 @@
 		{{- range where .Pages.ByWeight "Type" "intro" -}}
 			{{- partial "intermission.html" . -}}
 		{{- end -}}
+		{{- $autoNumber := 0 -}}
 		{{- range where .Pages.ByWeight "Type" "!=" "intro" -}}
 			{{- if .Params.intermission -}}
 				{{- partial "intermission.html" . -}}
 			{{- else -}}
-				{{- partial "question.html" . -}}
+				{{- $autoNumber = add $autoNumber 1 -}}
+				{{- partial "question.html" (dict "page" . "autoNumber" $autoNumber) -}}
 			{{- end -}}
 		{{- end -}}
 		<script src="slidy/slidy.js" charset="utf-8"></script>

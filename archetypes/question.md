@@ -13,9 +13,9 @@ How is the question number determined?
 4. "order" parameter in front matter
 
 {{% answer-info %}}
-The "weight" parameter determines the ordering of questions and intermissions: They will be presented in order of ascending weight. If the "weight" parameter is not suitable as a question number, you can add the "number" parameter. The "number" parameter need not be a simple number: It can be an arbitrary string.
+The "weight" parameter determines the ordering of questions and intermissions: They will be presented in order of ascending weight. Questions will be automatically numbered based on this ordering.
 
-You can also use the "title" parameter to completely override the title that is shown on the slide.
+If the automatic numbering is not suitable for your usage, you can add the "number" parameter. The "number" parameter need not be a simple number; it can be an arbitrary string. You can also use the "title" parameter to completely override the title that is shown on the slide.
 
 (Note that this information is only shown when the answer is shown.)
 {{% /answer-info %}}

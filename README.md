@@ -6,9 +6,9 @@ Quizcast is a theme for [Hugo](https://gohugo.io/) that presents a quiz using [S
 
 You can use the `question` archetype to create questions. It contains some information on its usage.
 
-Intermissions can be created using the `intermission` archetype. Be prepared to create your own question numbers, as the weights of the intermission slides will lead to "skipped" question numbers otherwise.
+Intermissions can be created using the `intermission` archetype.
 
-Introduction slides can be created using the `intro` archetype. These will be placed at the beginning of the quiz. Introduction slides can use weights independent of questions and intermissions, and do not require creating new question numbers.
+Introduction slides can be created using the `intro` archetype. These will be placed at the beginning of the quiz. Introduction slides can use weights independent of questions and intermissions.
 
 ## Suggestions for Site Configuration
 

@@ -1,13 +1,9 @@
-{{- with .Title -}}
+{{- with .page.Title -}}
 	{{- . -}}
 {{- else -}}
-	{{- with .Params.number -}}
+	{{- with .page.Params.number -}}
 		Question {{ . }}
 	{{- else -}}
-		{{- with .Params.weight -}}
-			Question {{ . }}
-		{{- else -}}
-			Question
-		{{- end -}}
+		Question {{ .autoNumber }}
 	{{- end -}}
 {{- end -}}
