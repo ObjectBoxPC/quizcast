@@ -1,7 +1,6 @@
-(function() {
-	'use strict';
-	function toggleShow() {
-		var slide = getContainingSlide(this);
+'use strict';
+(function (document) {
+	function toggleShow(slide) {
 		if (slide.hasAttribute('data-showing-answer')) {
 			slide.removeAttribute('data-showing-answer');
 		} else {
@@ -9,28 +8,18 @@
 		}
 	}
 
-	function getContainingSlide(element) {
-		var ancestor = element;
-		while ((ancestor = element.parentElement)) {
-			if (isSlide(ancestor)) {
-				return ancestor;
-			}
+	function addShowAnswerHandlers(slide) {
+		var showAnswerButtons = slide.querySelectorAll('.show-answer');
+		for (var i = 0; i < showAnswerButtons.length; i++) {
+			showAnswerButtons[i].addEventListener('click', function (event) {
+				toggleShow(slide);
+				event.stopPropagation();
+			});
 		}
-		return null;
 	}
 
-	function isSlide(element) {
-		var classes = element.className.split(' ');
-		for (var i = 0; i < classes.length; i++) {
-			if (classes[i] === 'slide') {
-				return true;
-			}
-		}
-		return false;
+	var slides = document.querySelectorAll('.slide');
+	for (var i = 0; i < slides.length; i++) {
+		addShowAnswerHandlers(slides[i]);
 	}
-
-	var showAnswerButtons = document.querySelectorAll('.show-answer');
-	for (var i = 0; i < showAnswerButtons.length; i++) {
-		showAnswerButtons[i].onclick = toggleShow;
-	}
-})();
+})(document);
