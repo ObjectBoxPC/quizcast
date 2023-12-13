@@ -12,6 +12,8 @@ How is the question number determined?
 3. {{% correct %}}"weight" parameter in front matter{{% /correct %}}
 4. "order" parameter in front matter
 
+(Note: This question uses numeric choices, which is supported by standard Markdown. To use alphabetical choices, consider using Pandoc.)
+
 {{% answer-info %}}
 The "weight" parameter determines the ordering of questions and intermissions: They will be presented in order of ascending weight. Questions will be automatically numbered based on this ordering.
 
