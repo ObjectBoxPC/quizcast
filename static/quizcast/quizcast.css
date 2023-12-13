@@ -1,6 +1,6 @@
 [data-showing-answer] .correct {
-	color: green;
-	font-weight: bold;
+	background-color: green;
+	color: white;
 }
 
 .answer-info {
